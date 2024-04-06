@@ -40,7 +40,7 @@ public class UserServiceImpl implements UserService {
         ResponseDto response = new ResponseDto();
         Set<Role> userRole = new HashSet<>();
         String hashedPassword = passwordEncoder.encode(registerUserDto.getPassword());
-        Role role = roleRepo.findById("Customer").orElseThrow(() -> {
+        Role role = roleRepo.findById(1L).orElseThrow(() -> {
             throw new CustomException("Role Not Found");
         });
         userRole.add(role);

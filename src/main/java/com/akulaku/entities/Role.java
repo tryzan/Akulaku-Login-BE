@@ -9,12 +9,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "Role")
+@Table(name = "MST_ROLE")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Role {
+
     @Id
+    @Column(name = "role_id")
+    private Long id;
+
     @Column(name = "role_Name")
     private String name;
 }
